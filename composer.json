@@ -1,0 +1,17 @@
+{
+    "name": "thecodeholic/php8.0",
+    "authors": [
+        {
+            "name": "Zura Sekhniashvili",
+            "email": "sekhniashvilizura@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./src"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    }
+}
