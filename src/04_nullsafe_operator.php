@@ -1,18 +1,15 @@
 <?php
+$object = json_decode('{
+	"user": {
+		"address": null,
+		"taxData": {
+			"taxID": "33"
+		}
+	}
+}', false);
 
-// php7.4
-$country =  null;
-
-if ($session !== null) {
-    $user = $session->user;
-
-    if ($user !== null) {
-        $address = $user->getAddress();
-
-        if ($address !== null) {
-            $country = $address->country;
-        }
-    }
-}
-// php8.0
-$country = $session?->user?->getAddress()?->country;
+echo $object?->notExists?->some?->property ?? 'not exists'; // not exists
+echo "\n";
+echo $object?->user?->address?->city ?? 'no city'; // no city
+echo "\n";
+echo $object?->user?->taxData?->taxID ?? 'no tax id'; // 33
